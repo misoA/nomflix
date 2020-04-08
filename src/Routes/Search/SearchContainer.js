@@ -1,21 +1,31 @@
-import React from "react";
-import SearchPresenter from "./SearchPresenter";
-import { MoviesApi, TVApi } from "api";
+import React from 'react';
+import SearchPresenter from './SearchPresenter';
+import { MoviesApi, TVApi } from 'api';
 
 export default class extends React.Component {
   state = {
     movieResults: null,
     tvResults: null,
-    searchTerm: "",
+    searchTerm: '',
     error: null,
-    loading: false,
+    loading: false
   };
 
-  handleSubmit = () => {
+  handleSubmit = event => {
+    event.preventDefault();
     const { searchTerm } = this.state;
-    if (searchTerm !== "") {
+    if (searchTerm !== '') {
       this.searcyByTerm();
     }
+  };
+
+  updateTerm = event => {
+    const {
+      target: { value }
+    } = event;
+    this.setState({
+      searchTerm: value
+    });
   };
 
   searcyByTerm = async () => {
@@ -23,25 +33,25 @@ export default class extends React.Component {
 
     try {
       this.setState({
-        loading: true,
+        loading: true
       });
       const {
-        data: { results: movieResults },
+        data: { results: movieResults }
       } = await MoviesApi.search(searchTerm);
       const {
-        data: { results: tvResults },
+        data: { results: tvResults }
       } = await TVApi.search(searchTerm);
       this.setState({
         movieResults,
-        tvResults,
+        tvResults
       });
     } catch (error) {
       this.setState({
-        error: "Can't find results.",
+        error: "Can't find results."
       });
     } finally {
       this.setState({
-        loading: false,
+        loading: false
       });
     }
   };
@@ -52,10 +62,11 @@ export default class extends React.Component {
       <SearchPresenter
         movieResults={movieResults}
         tvResults={tvResults}
-        searchTerm={searchTerm}
-        error={error}
         loading={loading}
+        error={error}
+        searchTerm={searchTerm}
         handleSubmit={this.handleSubmit}
+        updateTerm={this.updateTerm}
       />
     );
   }
