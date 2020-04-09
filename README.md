@@ -2,12 +2,14 @@
 
 Learning React and ES6 by building a Movie Discovery App
 
+Using [The Movie DB API](https://developers.themoviedb.org/3)
+
 ## Screens
 
-- [ ] Home
-- [ ] TV Shows
-- [ ] Search
-- [ ] Detail
+- [x] Home
+- [x] TV Shows
+- [x] Search
+- [x] Detail
 
 ## API Verbs
 
@@ -22,8 +24,8 @@ Learning React and ES6 by building a Movie Discovery App
 
 ## Code Challenges
 
-- [ ] IMDB Link
-- [ ] Tabs inside of Movie / Show Details (YT Videos, Production Company & Countries)
-- [ ] Collections Link
-- [ ] /collections Route
-- [ ] On TV Show, show seasons and creators
+- [x] IMDB Link
+- [x] Tabs inside of Movie / Show Details (YT Videos, Production Company & Countries)
+- [x] Collections Link
+- [x] /collections Route
+- [x] On TV Show, show seasons and creators

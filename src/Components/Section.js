@@ -8,7 +8,7 @@ const Container = styled.div`
   }
 `;
 const Title = styled.div`
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
 `;
 const Grid = styled.div`
@@ -29,8 +29,8 @@ Section.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired
+    PropTypes.node,
+  ]).isRequired,
 };
 
 export default Section;
