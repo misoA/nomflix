@@ -29,7 +29,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "http://misoa.github.io/nomfilx",
+  "homepage": "http://misoa.github.io",
   "browserslist": {
     "production": [
       ">0.2%",
