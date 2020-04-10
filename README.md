@@ -29,3 +29,7 @@ Using [The Movie DB API](https://developers.themoviedb.org/3)
 - [x] Collections Link
 - [x] /collections Route
 - [x] On TV Show, show seasons and creators
+
+## Preview
+
+#### Tri it on netlify : [go to preview](https://competent-hamilton-ba72e0.netlify.com)
